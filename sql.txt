@@ -1,14 +1,9 @@
 CREATE TABLE publishers (
-    pub_id   CHAR(3) NOT NULL,
-    pub_name VARCHAR(20) NOT NULL,
-    year_est VARCHAR(4),
-    city     VARCHAR(15) NOT NULL,
-    state    CHAR(2)             ,
-    country  VARCHAR(15) NOT NULL,
-  CONSTRAINT pk_publishers PRIMARY KEY (pub_id)
+    pub_name    VARCHAR(225) NOT NULL,
+    pub_address VARCHAR(225) NOT NULL,
+    pub_phone   VARCHAR(225) NOT NULL,
+    pub_email   VARCHAR(225) NOT NULL,
+    CONSTRAINT pk_publishers PRIMARY KEY (pub_name)
   );
-
-INSERT INTO publishers (pub_id,pub_name,year_est,city,state,country)
-VALUES('1','Activision Blizzard', '2008','Santa Monica','CA','USA');
 
 SELECT * FROM publishers;
